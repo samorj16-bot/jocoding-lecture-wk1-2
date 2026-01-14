@@ -3,12 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>New Hiring Form</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+  <main class="page">
+    <header class="form-header">
+      <div class="header-left">
+        <p class="form-id">Form NH-4 (2024)</p>
+        <h1>New Hiring Form</h1>
+        <p class="subtitle">Complete this form so your employer can withhold the correct federal income tax.</p>
+      </div>
+      <div class="header-right">
+        <div class="agency-box">
+          <span class="agency-title">Employer Copy</span>
+          <span class="agency-subtitle">Keep for your records</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="alert">
+      <p><strong>Note:</strong> Follow the step-by-step instructions. Your entries stay on file with your employer.</p>
+    </section>
+
+    <form class="w4-form">
+      <section class="step">
+        <div class="step-title">
+          <span class="step-number">Step 1</span>
+          <h2>Employee Information</h2>
+        </div>
+        <div class="grid three">
+          <label class="field">
+            <span>First name and middle initial</span>
+            <input class="line-input" type="text" name="first_name" />
+          </label>
+          <label class="field">
+            <span>Last name</span>
+            <input class="line-input" type="text" name="last_name" />
+          </label>
+          <label class="field">
+            <span>Social security number</span>
+            <input class="line-input" type="text" name="ssn" />
+          </label>
+        </div>
+        <div class="grid two">
+          <label class="field">
+            <span>Home address (number and street)</span>
+            <input class="line-input" type="text" name="address" />
+          </label>
+          <label class="field">
+            <span>City, state, ZIP</span>
+            <input class="line-input" type="text" name="city_state_zip" />
+          </label>
+        </div>
+        <div class="status-row">
+          <span class="status-label">Filing status (check one)</span>
+          <label class="check">
+            <input type="checkbox" name="status_single" />
+            <span>Single or Married filing separately</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="status_joint" />
+            <span>Married filing jointly or Qualifying surviving spouse</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="status_head" />
+            <span>Head of household</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="step">
+        <div class="step-title">
+          <span class="step-number">Step 2</span>
+          <h2>Multiple Jobs or Spouse Works</h2>
+        </div>
+        <p class="step-text">Complete this step if you (1) hold more than one job or (2) are married filing jointly and your spouse works.</p>
+        <div class="checklist">
+          <label class="check">
+            <input type="checkbox" name="multiple_jobs_use_estimator" />
+            <span>Use the IRS estimator and enter the result on Step 4(c).</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="multiple_jobs_two_jobs" />
+            <span>Check here if there are only two jobs total in the household.</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="multiple_jobs_worksheet" />
+            <span>Use the worksheet on page 3 and enter the result on Step 4(c).</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="step">
+        <div class="step-title">
+          <span class="step-number">Step 3</span>
+          <h2>Claim Dependents</h2>
+        </div>
+        <div class="grid three">
+          <label class="field">
+            <span>Qualifying children under 17 x $2,000</span>
+            <input class="line-input" type="text" name="children_credit" />
+          </label>
+          <label class="field">
+            <span>Other dependents x $500</span>
+            <input class="line-input" type="text" name="other_dependents" />
+          </label>
+          <label class="field">
+            <span>Add the amounts above</span>
+            <input class="line-input" type="text" name="total_dependents" />
+          </label>
+        </div>
+      </section>
+
+      <section class="step">
+        <div class="step-title">
+          <span class="step-number">Step 4</span>
+          <h2>Other Adjustments (Optional)</h2>
+        </div>
+        <div class="grid three">
+          <label class="field">
+            <span>Other income (not from jobs)</span>
+            <input class="line-input" type="text" name="other_income" />
+          </label>
+          <label class="field">
+            <span>Deductions</span>
+            <input class="line-input" type="text" name="deductions" />
+          </label>
+          <label class="field">
+            <span>Extra withholding each pay period</span>
+            <input class="line-input" type="text" name="extra_withholding" />
+          </label>
+        </div>
+      </section>
+
+      <section class="step signature-step">
+        <div class="step-title">
+          <span class="step-number">Step 5</span>
+          <h2>Sign Here</h2>
+        </div>
+        <p class="step-text">Under penalties of perjury, I declare that this form is true, correct, and complete.</p>
+        <div class="grid two">
+          <label class="field">
+            <span>Employee signature</span>
+            <input class="line-input" type="text" name="signature" />
+          </label>
+          <label class="field">
+            <span>Date</span>
+            <input class="line-input" type="text" name="signature_date" />
+          </label>
+        </div>
+      </section>
+
+      <section class="employer-box">
+        <div class="step-title">
+          <span class="step-number">For Employer Use Only</span>
+        </div>
+        <div class="grid three">
+          <label class="field">
+            <span>Employer name and address</span>
+            <input class="line-input" type="text" name="employer_name" />
+          </label>
+          <label class="field">
+            <span>Employer identification number (EIN)</span>
+            <input class="line-input" type="text" name="employer_ein" />
+          </label>
+          <label class="field">
+            <span>First date of employment</span>
+            <input class="line-input" type="text" name="employment_date" />
+          </label>
+        </div>
+      </section>
+    </form>
+  </main>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
